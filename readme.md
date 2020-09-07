@@ -9,7 +9,7 @@
 
 ### 使用：
 1. 同目录下创建`CloudflareConf.json`文件，格式如下，填写cloudflare的相关密钥
-```json
+```json5
 {
   "Email": "填登陆邮箱",
   "API_key": "填对应的API_key", //见 https://dash.cloudflare.com/profile/api-tokens
@@ -17,7 +17,7 @@
 }
 ```
 2. 修改`domains.json`文件，填写所需要绑定的域名
-```json
+```json5
 {
   "Update_IPv6": true, //当为ture时，将会添加或更行ipv6的DNS记录
   "IPv6_domain": "smile-Laptop.liuchang.men", // ipv6绑定域名
