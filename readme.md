@@ -27,7 +27,7 @@
   "IPv4_domain": "test.liuchang.men" 
 }
 ```
-* `Update_IPv6\Update_IPv4` 当为ture时，将会添加或更行ipv6\ipv4的DNS记录
+* `Update_IPv6\Update_IPv4` 当为`true`时，将会添加或更行ipv6\ipv4的DNS记录
 * `IPv6_domain\IPv4_domain` 填写绑定的IPv6\IPv4域名
 
 #### 3. 编译并运行`CloudflareDDNS`，程序自动每**10分钟**（其他定时请修改代码）更新一次记录，不会因为网络原因异常退出。
