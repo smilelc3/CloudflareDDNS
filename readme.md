@@ -4,7 +4,7 @@
 ### 特点：
 1. 由`go`编写，可运行在多种系统平台上，未使用第三方库；
 2. 支持ipv4的`A`解析，和ipv6的`AAAA`解析；
-3. 获取公网IP借助[test-ipv6.com](test-ipv6.com)和[whatismyipaddress.com](whatismyipaddress.com)双平台，保证IP准确；
+3. 获取公网IP借助[test-ipv6.com](http://test-ipv6.com)和[whatismyipaddress.com](http://www.whatismyipaddress.com)双平台，保证IP准确；
 4. 自带周期计时器，定时更新`ipv4`和`ipv6`解析服务。
 
 ### 使用：
