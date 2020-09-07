@@ -9,22 +9,27 @@
 
 ### 使用：
 1. 同目录下创建`CloudflareConf.json`文件，格式如下，填写cloudflare的相关密钥
-```json5
+```json
 {
   "Email": "填登陆邮箱",
-  "API_key": "填对应的API_key", //见 https://dash.cloudflare.com/profile/api-tokens
+  "API_key": "填对应的API_key", 
   "Zone_ID": "填Zone_ID值"
 }
 ```
+* `API_key` 见 [https://dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens)
+
 2. 修改`domains.json`文件，填写所需要绑定的域名
-```json5
+```json
 {
-  "Update_IPv6": true, //当为ture时，将会添加或更行ipv6的DNS记录
-  "IPv6_domain": "smile-Laptop.liuchang.men", // ipv6绑定域名
-  "Update_IPv4": false, //当为ture时，将会添加或更行ipv4的DNS记录
-  "IPv4_domain": "test.liuchang.men" // ipv4绑定域名
+  "Update_IPv6": true, 
+  "IPv6_domain": "smile-Laptop.liuchang.men", 
+  "Update_IPv4": false, 
+  "IPv4_domain": "test.liuchang.men" 
 }
 ```
+* `Update_IPv6\Update_IPv4` 当为ture时，将会添加或更行ipv6\ipv4的DNS记录
+* `IPv6_domain\IPv4_domain` 填写绑定的IPv6\IPv4域名
+
 3. 编译并运行`CloudflareDDNS`，程序自动每**10分钟**（其他定时请修改代码）更新一次记录，不会因为网络原因异常退出。
 
 ### 截图：
