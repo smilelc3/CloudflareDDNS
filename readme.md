@@ -8,7 +8,7 @@
 4. 自带周期计时器，定时更新`ipv4`和`ipv6`解析服务。
 
 ### 使用：
-1. 同目录下创建`CloudflareConf.json`文件，格式如下，填写cloudflare的相关密钥
+#### 1. 同目录下创建`CloudflareConf.json`文件，格式如下，填写cloudflare的相关密钥
 ```json
 {
   "Email": "填登陆邮箱",
@@ -18,7 +18,7 @@
 ```
 * `API_key` 见 [https://dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens)
 
-2. 修改`domains.json`文件，填写所需要绑定的域名
+#### 2. 修改`domains.json`文件，填写所需要绑定的域名
 ```json
 {
   "Update_IPv6": true, 
@@ -30,7 +30,7 @@
 * `Update_IPv6\Update_IPv4` 当为ture时，将会添加或更行ipv6\ipv4的DNS记录
 * `IPv6_domain\IPv4_domain` 填写绑定的IPv6\IPv4域名
 
-3. 编译并运行`CloudflareDDNS`，程序自动每**10分钟**（其他定时请修改代码）更新一次记录，不会因为网络原因异常退出。
+#### 3. 编译并运行`CloudflareDDNS`，程序自动每**10分钟**（其他定时请修改代码）更新一次记录，不会因为网络原因异常退出。
 
 ### 截图：
 ![](example.png)
