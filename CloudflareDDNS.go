@@ -17,14 +17,13 @@ type DomainsConfig struct {
 
 func main() {
 
-
 	//创建IP管理器
 	ipManager := NewIpManager()
 	//创建CloudflareAPI
 	api := NewCloudflareAPI()
 
 	//周期性任务函数
-	CyclicTask :=func(){
+	CyclicTask := func() {
 		//获取公网IP
 		ipManager.GetPublicIpAddress()
 
@@ -93,17 +92,15 @@ func main() {
 			}
 		}
 	}
-	tickSecondTime := 10*60//定时任务second
-	var timesChannel chan int //定义运行计数ch
+
+	tickSecondTime := 10 * 60 //定时任务second
 	ticker := time.NewTicker(time.Second * time.Duration(tickSecondTime))
 
-	go func() {
-		CyclicTask()
-		for range ticker.C {
-			CyclicTask()
-		}
-		timesChannel <- 1
-	}()
-	<-timesChannel
+	defer ticker.Stop()
+	go CyclicTask()
+	for range ticker.C {
+		go CyclicTask()
+	}
+
 	return
 }
