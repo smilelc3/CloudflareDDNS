@@ -8,7 +8,7 @@
 4. 自带周期计时器，定时更新`ipv4`和`ipv6`解析服务。
 
 ### 使用：
-#### 1. 同目录下创建`CloudflareConf.json`文件，格式如下，填写cloudflare的相关密钥
+#### 1. 同目录下修改`CloudflareConf.json`文件，格式如下，填写cloudflare的相关密钥
 ```json
 {
   "Email": "填登陆邮箱",
